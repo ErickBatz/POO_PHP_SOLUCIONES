@@ -5,54 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario biblioteca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f5f1; color: #2b2723; }
+        .form-shell { max-width: 760px; }
+        .panel { border: 1px solid #e5dbcf; border-radius: 8px; background: #fff; }
+        .panel-head { border-bottom: 1px solid #e5dbcf; background: #fbf8f4; }
+        .section-label { color: #7a4f35; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+        .btn-main { background: #7a4f35; border-color: #7a4f35; color: #fff; }
+        .btn-main:hover { background: #653f29; border-color: #653f29; color: #fff; }
+    </style>
 </head>
-<body class="bg-light">
-    <header class="bg-dark text-white py-4">
-        <div class="container">
-            <h1 class="h3 mb-1">Biblioteca Virtual</h1>
-            <p class="mb-0 text-white-50">Registro de libros</p>
-        </div>
-    </header>
-
+<body>
     <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0">Datos del libro</h2>
-                    </div>
+        <section class="form-shell mx-auto">
+            <div class="mb-4">
+                <p class="section-label mb-2">Biblioteca virtual</p>
+                <h1 class="h3 mb-1">Registro de libros</h1>
+                <p class="text-secondary mb-0">Catalogo con ISBN, titulo, autor y fecha de publicacion.</p>
+            </div>
 
-                    <div class="card-body">
-                        <form action="objetoLibro.php" method="post">
-                            <div class="mb-3">
-                                <label for="num_isbn" class="form-label">ISBN</label>
-                                <input type="number" class="form-control" name="num_isbn" id="num_isbn" placeholder="Ejemplo: 9781234567890">
-                            </div>
+            <div class="panel shadow-sm">
+                <div class="panel-head px-4 py-3">
+                    <h2 class="h5 mb-0">Datos del libro</h2>
+                </div>
 
-                            <div class="mb-3">
-                                <label for="txt_titulo" class="form-label">Titulo</label>
-                                <input type="text" class="form-control" name="txt_titulo" id="txt_titulo" placeholder="Ejemplo: Cien anos de soledad">
-                            </div>
+                <div class="p-4">
+                    <form action="objetoLibro.php" method="post">
+                        <div class="mb-3">
+                            <label for="num_isbn" class="form-label">ISBN</label>
+                            <input type="number" class="form-control" name="num_isbn" id="num_isbn" placeholder="Ejemplo: 9781234567890">
+                        </div>
 
-                            <div class="mb-3">
-                                <label for="txt_autor" class="form-label">Autor</label>
-                                <input type="text" class="form-control" name="txt_autor" id="txt_autor" placeholder="Ejemplo: Gabriel Garcia Marquez">
-                            </div>
+                        <div class="mb-3">
+                            <label for="txt_titulo" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" name="txt_titulo" id="txt_titulo" placeholder="Ejemplo: Cien anos de soledad">
+                        </div>
 
-                            <div class="mb-4">
-                                <label for="date_anioPublicacion" class="form-label">Fecha de publicacion</label>
-                                <input type="date" class="form-control" name="date_anioPublicacion" id="date_anioPublicacion">
-                            </div>
+                        <div class="mb-3">
+                            <label for="txt_autor" class="form-label">Autor</label>
+                            <input type="text" class="form-control" name="txt_autor" id="txt_autor" placeholder="Ejemplo: Gabriel Garcia Marquez">
+                        </div>
 
-                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
-                                <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
-                                <button type="submit" class="btn btn-primary">Enviar datos</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="mb-4">
+                            <label for="date_anioPublicacion" class="form-label">Fecha de publicacion</label>
+                            <input type="date" class="form-control" name="date_anioPublicacion" id="date_anioPublicacion">
+                        </div>
+
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                            <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                            <button type="submit" class="btn btn-main">Enviar datos</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
